@@ -44,14 +44,14 @@ p-breadcrumb {
       gap: 10px;
       margin-top: 20px;
     }
-    
-    .hover{
-        font-size: medium;
-        font-weight: bold;
+
+    .hover {
+      font-size: medium;
+      font-weight: bold;
     }
     .hover:hover {
-        background-color: #4caf50;
-        color: white;
+      background-color: #4caf50;
+      color: white;
     }
   }
 
@@ -65,6 +65,13 @@ p-breadcrumb {
   }
 }
 
+@media (max-width: 990px) {
+  .video {
+    width: 410px;
+    height: 360px;
+  }
+}
+
 @media (max-width: 768px) {
   .course-content {
     flex-direction: column;
@@ -74,5 +81,9 @@ p-breadcrumb {
     .right-content {
       width: 100%;
     }
+  }
+  .video {
+    width: 410px;
+    height: 360px;
   }
 }

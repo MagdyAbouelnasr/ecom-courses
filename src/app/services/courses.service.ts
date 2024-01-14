@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject, signal } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { CourseInterface } from '../types/course.interface';
-import { SortingEnum } from '../types/Sorting.enum';
 
 @Injectable({
   providedIn: 'root',

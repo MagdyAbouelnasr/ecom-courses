@@ -4,8 +4,8 @@
 
   h1 {
     margin: 0;
-    color: #333; 
-    font-size: 2em; 
+    color: #333;
+    font-size: 2em;
   }
 }
 
@@ -71,22 +71,21 @@
 }
 
 .sorting-container {
-  display: flex; // Use flexbox for layout
-  align-items: center; // Vertically align items in the center
-  justify-content: space-between; // Create space between the elements
-  width: 100%; // Full width of the container
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   .full-width-select,
   .search-bar {
-    flex: 1; // Allow both elements to grow and take up equal space
-    margin-right: 10px; // Add some space to the right of each element
+    flex: 1;
+    margin-right: 10px;
 
     &:last-child {
-      margin-right: 0; // Remove the margin for the last element
+      margin-right: 0;
     }
   }
 
   mat-form-field {
-    width: 100%; // Full width for each form field
+    width: 100%;
   }
 }

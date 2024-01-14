@@ -1,7 +1,7 @@
-# Angular E-Learning Platform
+# Angular Ecom-Courses
 
 ## Project Overview
-This Angular-based e-learning platform offers a seamless experience for users to explore and enroll in various courses. It features a modern, responsive UI and functionalities that cater to both educational needs and user convenience.
+This Angular-based e-learning platform offers a seamless experience for users to explore and buy  various courses. It features a modern, responsive UI and functionalities that cater to both educational needs and user convenience.
 
 ## Features
 

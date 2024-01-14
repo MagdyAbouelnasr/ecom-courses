@@ -21,7 +21,7 @@
   ],
   "hosting": [
     {
-      "public": "public",
+      "public": "dist/ecom-courses",
       "ignore": [
         "firebase.json",
         "**/.*",

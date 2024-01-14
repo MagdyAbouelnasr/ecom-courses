@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -90,12 +91,33 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "ecom-courses:build:production",
+              "serveTarget": "ecom-courses:serve:production"
+            },
+            "development": {
+              "buildTarget": "ecom-courses:build:development",
+              "serveTarget": "ecom-courses:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "63017c0b-9ad3-442b-93a6-0418c3245680"
   }
 }

@@ -1,0 +1,50 @@
+<div class="register-banner">
+  <h1>Register</h1>
+</div>
+
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="register-form">
+    <mat-form-field appearance="fill" class="register-field">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <mat-error *ngIf="form.get('email')?.hasError('email')"
+        >Make sure email format is correct</mat-error
+      >
+      <mat-error *ngIf="form.get('email')?.hasError('required')"
+        >email is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="register-field">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <mat-error *ngIf="form.get('password')?.hasError('minlength')"
+        >Minimum characters 6</mat-error
+      >
+      <mat-error *ngIf="form.get('password')?.hasError('required')"
+        >password is required</mat-error
+      >
+    </mat-form-field>
+
+    <div class="submit-button">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>

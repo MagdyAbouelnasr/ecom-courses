@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "courses-store-99e8d"
+  },
+  "targets": {
+    "courses-store-99e8d": {
+      "hosting": {
+        "ecom-courses": [
+          "ecom-courses"
+        ]
+      }
+    }
+  }
+}

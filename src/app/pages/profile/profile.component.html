@@ -1,0 +1,109 @@
+<div class="profile-container">
+  <form [formGroup]="profileForm" class="profile-form">
+    <div class="left-column">
+      <div class="profile-image">
+        <img *ngIf="uploadedImage" [src]="uploadedImage" alt="Profile Image" />
+        <input type="file" (change)="onImageUpload($event)" hidden #fileInput />
+        <button mat-raised-button (click)="fileInput.click()">
+          Upload Image
+        </button>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <!-- Display Name -->
+      <mat-form-field appearance="fill">
+        <mat-label>Display Name</mat-label>
+        <input matInput formControlName="username" />
+        <mat-error>minimum character length is 5</mat-error>
+      </mat-form-field>
+
+      <!-- First Name -->
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" />
+        <mat-error>minimum character length is 5</mat-error>
+      </mat-form-field>
+
+      <!-- Last Name -->
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" />
+      </mat-form-field>
+
+      <!-- About Yourself -->
+      <mat-form-field appearance="fill">
+        <mat-label>About Yourself</mat-label>
+        <textarea matInput formControlName="aboutYourself"></textarea>
+        <mat-error>maxiumum character length is 100</mat-error>
+      </mat-form-field>
+
+      <!-- Area of Interest -->
+      <section class="example-section" [formGroup]="areaOfInterestGroup">
+        <h4>Select your Interest:</h4>
+        <p>
+          <mat-checkbox formControlName="webDev">Web Development</mat-checkbox>
+        </p>
+        <p>
+          <mat-checkbox formControlName="mobileDev"
+            >Mobile Development</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox formControlName="dataScience"
+            >Data Science</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox formControlName="machineLearning"
+            >Machine Learning</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox formControlName="cloudComputing"
+            >Cloud Computing</mat-checkbox
+          >
+        </p>
+      </section>
+
+      <!-- Add select or other input type for area of interest -->
+
+      <!-- Status: Student or Professional -->
+      <mat-radio-group formControlName="status">
+        <mat-radio-button value="student">Student</mat-radio-button>
+        <mat-radio-button value="professional">Professional</mat-radio-button>
+      </mat-radio-group>
+
+      <!-- Conditional fields for 'Professional' -->
+      <div *ngIf="profileForm.get('status')?.value === 'professional'">
+        <!-- Experience -->
+        <mat-radio-group formControlName="experience">
+          <mat-radio-button value="0-5">0-5</mat-radio-button>
+          <mat-radio-button value="5-10">5-10</mat-radio-button>
+          <mat-radio-button value="10+">10 & above</mat-radio-button>
+        </mat-radio-group>
+        <br />
+        <!-- Expertise -->
+        <mat-radio-group formControlName="expertise">
+          <mat-radio-button value="backend">Back end</mat-radio-button>
+          <mat-radio-button value="frontend">Front end</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <!-- Mention Your Role -->
+      <mat-form-field appearance="fill">
+        <mat-label>Mention Your Role</mat-label>
+        <textarea matInput formControlName="role"></textarea>
+        <mat-error>maxiumum character length is 200</mat-error>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        (click)="onSave()"
+        [disabled]="!profileForm.valid"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</div>

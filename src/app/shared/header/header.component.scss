@@ -1,0 +1,40 @@
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.icon-button {
+  background: none;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.icon-button .icon {
+  width: 52px;
+}
+
+mat-menu {
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .action-buttons {
+      display: flex;
+
+      button {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .full-width-button {
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: green; 
+      color: white;
+    }
+  }
+}

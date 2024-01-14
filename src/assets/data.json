@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "courseName": "Advanced Machine Learning",
+    "author": "Alex Johnson",
+    "actualPrice": "₹1199",
+    "discountPercentage": "15%",
+    "tags": ["Machine Learning", "Python"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2019/06/bNPPMNkyPVfeOnsg-Y1WPix-aL0fjkvHNe8RtWn4Z7k-1024x536.jpg"
+  },
+  {
+    "id": 2,
+    "courseName": "JavaScript Frameworks Masterclass",
+    "author": "Emily White",
+    "actualPrice": "₹899",
+    "discountPercentage": "20%",
+    "tags": ["JavaScript", "React", "Vue"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2023/02/Modern-JavaScript.jpg"
+  },
+  {
+    "id": 3,
+    "courseName": "Full Stack Development with Django",
+    "author": "Chris Turner",
+    "actualPrice": "₹1499",
+    "discountPercentage": "10%",
+    "tags": ["Python", "Django", "JavaScript"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2023/03/Python-Django.jpg"
+  },
+  {
+    "id": 4,
+    "courseName": "Cybersecurity Essentials",
+    "author": "Sophia Davis",
+    "actualPrice": "₹1299",
+    "discountPercentage": "25%",
+    "tags": ["Cybersecurity", "Network Security"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2022/09/Cybersecurity_-_Academy.png"
+  },
+  {
+    "id": 5,
+    "courseName": "Mobile App UX Design",
+    "author": "Daniel Smith",
+    "actualPrice": "₹999",
+    "discountPercentage": "18%",
+    "tags": ["UX Design", "Mobile App Development"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2022/11/Master-Motion.jpg"
+  },
+  {
+    "id": 6,
+    "courseName": "Node.js for Beginners",
+    "author": "Ava Williams",
+    "actualPrice": "₹699",
+    "discountPercentage": "22%",
+    "tags": ["Node.js", "JavaScript"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2018/09/Logo-1024x1024.jpg"
+  },
+  {
+    "id": 7,
+    "courseName": "Artificial Intelligence in Business",
+    "author": "Noah Turner",
+    "actualPrice": "₹1599",
+    "discountPercentage": "12%",
+    "tags": ["Artificial Intelligence", "Business"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2023/12/xai-for-good-specialization.png.pagespeed.ic.VawUKUHKuD.webp"
+  },
+  {
+    "id": 8,
+    "courseName": "Swift Programming for iOS",
+    "author": "Emma Johnson",
+    "actualPrice": "₹1099",
+    "discountPercentage": "17%",
+    "tags": ["iOS", "Swift"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2019/04/iOS-1024x538.png"
+  },
+  {
+    "id": 9,
+    "courseName": "Responsive Web Design Principles",
+    "author": "Liam White",
+    "actualPrice": "₹799",
+    "discountPercentage": "21%",
+    "tags": ["Web Design", "HTML", "CSS"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2023/12/625204_436a_3.jpg"
+  },
+  {
+    "id": 10,
+    "courseName": "Java Fundamentals",
+    "author": "Olivia Turner",
+    "actualPrice": "₹899",
+    "discountPercentage": "0",
+    "tags": ["Java"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2019/09/SEO-Image-1024x538.png"
+  },
+  {
+    "id": 11,
+    "courseName": "Game Development with Unity",
+    "author": "Lucas Davis",
+    "actualPrice": "₹1399",
+    "discountPercentage": "14%",
+    "tags": ["Game Development", "Unity"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2023/02/Unity-Bootcamp.png"
+  },
+  {
+    "id": 12,
+    "courseName": "Python for Data Science",
+    "author": "Aria Smith",
+    "actualPrice": "₹1199",
+    "discountPercentage": "0",
+    "tags": ["Python", "Data Science"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2022/08/381a0046-5d78-4790-8776-74620d59f48e-e2e7f4677ce2.jpg"
+  },
+  {
+    "id": 13,
+    "courseName": "Frontend Development Bootcamp",
+    "author": "Mia Johnson",
+    "actualPrice": "₹999",
+    "discountPercentage": "18%",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2023/12/complete-intro.png"
+  },
+  {
+    "id": 14,
+    "courseName": "C# Programming Mastery",
+    "author": "Jackson White",
+    "actualPrice": "₹1099",
+    "discountPercentage": "0",
+    "tags": ["C#"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2022/12/xThe-Ultimate-C.png.pagespeed.ic.NXLrIsmxAC.webp"
+  },
+  {
+    "id": 15,
+    "courseName": "Angular Framework Deep Dive",
+    "author": "Ava Turner",
+    "actualPrice": "₹1299",
+    "discountPercentage": "15%",
+    "tags": ["Angular"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2022/08/Angular-4.jpg"
+  },
+  {
+    "id": 16,
+    "courseName": "Data Visualization with D3.js",
+    "author": "Ethan Davis",
+    "actualPrice": "₹899",
+    "discountPercentage": "0",
+    "tags": ["Data Visualization", "D3.js"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2021/02/Fullstack-D3.png"
+  },
+  {
+    "id": 17,
+    "courseName": "Android App Development Basics",
+    "author": "Isabella Smith",
+    "actualPrice": "₹799",
+    "discountPercentage": "0",
+    "tags": ["Android", "Mobile App Development"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2020/12/Fundamental-Android.png"
+  },
+  {
+    "id": 18,
+    "courseName": "Vue.js for Frontend Development",
+    "author": "Logan Johnson",
+    "actualPrice": "₹999",
+    "discountPercentage": "18%",
+    "tags": ["Vue.js", "JavaScript"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2021/04/xVueJS.jpg.pagespeed.ic.6fVcsZcJIh.webp"
+  },
+  {
+    "id": 19,
+    "courseName": "Cloud Computing Fundamentals",
+    "author": "Sophie Turner",
+    "actualPrice": "₹1199",
+    "discountPercentage": "16%",
+    "tags": ["Cloud Computing"],
+    "imgUrl": "https://get.freecoursesonline.me/wp-content/uploads/2023/10/google-cloud.jpg"
+  }
+]

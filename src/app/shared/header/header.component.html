@@ -1,0 +1,70 @@
+<mat-toolbar class="mat-primary">
+  <button class="icon-button" routerLink="/">
+    <img class="icon" src="assets/binder.svg" alt="Binder Logo" />
+  </button>
+
+  <span class="flex-spacer"></span>
+
+  <button mat-icon-button routerLink="/" aria-label="View Courses">
+    <mat-icon>book</mat-icon>
+  </button>
+  <button mat-icon-button routerLink="/wishlist" aria-label="Go to Wishlist">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="View Cart">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <ng-container *ngFor="let course of coursesService.coursesSignalCart()">
+      <menu mat-menu-item class="menu-item">
+        <span>{{ course.courseName }}</span>
+        <div class="action-buttons">
+          <button
+            mat-icon-button
+            (click)="addToWishlist(course)"
+            aria-label="Move to wishlist"
+            class="wishlist-button"
+          >
+            <mat-icon [color]="'accent'">favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            (click)="deleteFromCart(course.id)"
+            aria-label="Delete from cart"
+            class="delete-button"
+          >
+            <mat-icon [color]="'warn'">delete</mat-icon>
+          </button>
+        </div>
+      </menu>
+    </ng-container>
+    <menu mat-menu-item>
+      <button mat-button routerLink="/checkout" class="full-width-button">
+        GO TO CHECKOUT
+      </button>
+    </menu>
+  </mat-menu>
+
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menuProfile"
+    aria-label="Profile Menu"
+  >
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <mat-menu #menuProfile="matMenu">
+    <!-- Not signed in -->
+    <ng-container *ngIf="!authService.currentUserSignal(); else loggedInMenu">
+      <button mat-menu-item routerLink="/login">Login</button>
+      <button mat-menu-item routerLink="/register">Register</button>
+    </ng-container>
+
+    <!-- Signed in -->
+    <ng-template #loggedInMenu>
+      <button mat-menu-item routerLink="/profile">My Profile</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </ng-template>
+  </mat-menu>
+</mat-toolbar>

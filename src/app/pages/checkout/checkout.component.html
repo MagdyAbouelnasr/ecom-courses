@@ -1,0 +1,63 @@
+<section class="checkout-section">
+  <div *ngIf="coursesService.coursesSignalCart()?.length; else emptyCart">
+    <div class="page-banner">
+      <h1>Your Cart</h1>
+    </div>
+
+    <div class="cart-contents">
+      <ul class="cart">
+        <li
+          *ngFor="let course of coursesService.coursesSignalCart()"
+          class="cart-item"
+        >
+          <div class="course-info">
+            <h3>{{ course.courseName }}</h3>
+            <p>Author: {{ course.author }}</p>
+            <p>
+              Tags: <span *ngFor="let tag of course.tags">{{ tag }}</span>
+            </p>
+            <p>Price: {{ course.actualPrice }}</p>
+            <p>Discount: {{ course.discountPercentage }}</p>
+            <p>
+              Price After Discount:
+              {{
+                getDiscountedPrice(
+                  course.actualPrice,
+                  course.discountPercentage
+                )
+              }}
+            </p>
+          </div>
+          <div class="course-actions">
+            <button
+              mat-button
+              (click)="moveToWishlist(course)"
+              class="add-to-wishlist"
+            >
+              Move to Wish List
+            </button>
+            <button
+              mat-button
+              (click)="deleteFromCart(course.id)"
+              class="remove-from-cart"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="order-summary">
+        <h3>Total Value: {{ calculateTotal() }}</h3>
+        <h4>Money Saved: {{ calculateTotalDiscount() }}</h4>
+        <button mat-button (click)="onCheckout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <div class="page-banner">
+      <h1>Your Cart is Empty</h1>
+    </div>
+  </ng-template>
+</section>

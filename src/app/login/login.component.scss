@@ -1,0 +1,35 @@
+.login-banner {
+  width: 100%;
+  background-color: lightgray;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: white;
+
+    .login-field {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .submit-button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

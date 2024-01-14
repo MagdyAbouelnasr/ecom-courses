@@ -1,0 +1,60 @@
+<ng-container *ngIf="course; else noCourse">
+  <!-- Page Banner -->
+  <div class="page-banner">
+    <h1>Discover Latest Courses on {{ course.courseName }}</h1>
+  </div>
+
+  <!-- Breadcrumb -->
+  <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+
+  <!-- Course Content -->
+  <div class="course-content">
+    <div class="left-content">
+      <h2>{{ course.courseName }}</h2>
+      <p>Author: {{ course.author }}</p>
+      <p>Price: {{ course.actualPrice }}</p>
+      <p *ngIf="course.discountPercentage !== '0%'">
+        Discount: {{ course.discountPercentage }}
+      </p>
+      <p *ngIf="course.discountPercentage !== '0%'">
+        Discounted Price:
+        {{ getDiscountedPrice(course.actualPrice, course.discountPercentage) }}
+      </p>
+      <p *ngIf="showSaleTimer(course.discountPercentage)">
+        Time left: {{ calculateTimeLeft() }}
+      </p>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button mat-button (click)="addToWishlist(course)" class="hover">
+          Add to Wishlist
+        </button>
+        <button mat-button (click)="addToCart(course)" class="hover">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="right-content">
+      <!-- <img [src]="course.imgUrl" alt="{{ course.courseName }}" /> -->
+      <video
+        src="assets/demo-vid.mp4"
+        width="640"
+        height="360"
+        autoplay
+        controls
+        loop
+        poster="path/to/your-thumbnail.jpg"
+        preload="auto"
+      ></video>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noCourse>
+  <div class="page-banner">
+    <h1></h1>
+  </div>
+  <p>No Details to show</p>
+</ng-template>

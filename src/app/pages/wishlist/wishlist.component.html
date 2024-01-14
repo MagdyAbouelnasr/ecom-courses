@@ -1,0 +1,36 @@
+<section class="wishlist-section">
+  <!-- Page Banner -->
+  <div class="page-banner">
+    <h1>Your Wishlist</h1>
+  </div>
+
+  <!-- Wishlist Content -->
+  <ul class="wishlist">
+    <li
+      *ngFor="let course of coursesService.coursesSignalWishlist()"
+      class="wishlist-item"
+    >
+      <div class="course-info">
+        <h3>{{ course.courseName }}</h3>
+        <p>Author: {{ course.author }}</p>
+        <!-- More course details like price, discount, etc. -->
+      </div>
+      <div class="course-actions">
+        <button
+          mat-button
+          (click)="addToCart(course)"
+          class="action-btn add-to-cart"
+        >
+          Add to Cart
+        </button>
+        <button
+          mat-button
+          (click)="removeFromWishlist(course.id)"
+          class="action-btn remove-from-wishlist"
+        >
+          Delete
+        </button>
+      </div>
+    </li>
+  </ul>
+</section>

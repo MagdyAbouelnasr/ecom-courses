@@ -1,0 +1,85 @@
+<div>
+    <div class="page-banner">
+    <h1>Discover Latest Courses on Binder</h1>
+  </div>
+  <div class="sorting-container">
+    <mat-form-field appearance="fill" class="full-width-select">
+      <mat-label>Sort by</mat-label>
+      <mat-select (selectionChange)="updateSorting($event.value)">
+        <mat-option value="highest">Price: High to Low</mat-option>
+        <mat-option value="lowest">Price: Low to High</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="search-bar">
+      <mat-label>Search</mat-label>
+      <input matInput #searchInput (keyup)="onSearch(searchInput.value)" />
+    </mat-form-field>
+  </div>
+
+  <mat-grid-list [cols]="cols$ | async" rowHeight="{{rowHeight$ | async}}" class="grid-list">
+    @for (course of pageSlice; track course.id) {
+    <mat-grid-tile class="courses-container">
+      <mat-card class="course-card">
+        <mat-card-header (click)="courseDetail(course.id)">
+          <mat-card-title class="courseName">{{ course.courseName }}</mat-card-title>
+          <mat-card-subtitle class="author">Author: {{ course.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="{{ course.imgUrl }}"
+          (click)="courseDetail(course.id)"
+        />
+        <mat-card-content (click)="courseDetail(course.id)">
+          <div class="price-details">
+            <h3>
+              Price:
+              <span
+                [ngClass]="{
+                  strikethrough: course.discountPercentage !== '0'
+                }"
+                >{{ course.actualPrice }}</span
+              >
+            </h3>
+            <span *ngIf="course.discountPercentage !== '0'"
+              >Discount: {{ course.discountPercentage }}</span
+            >
+            <h2 *ngIf="course.discountPercentage !== '0'">
+              {{
+                getDiscountedPrice(
+                  course.actualPrice,
+                  course.discountPercentage
+                )
+              }}
+            </h2>
+          </div>
+
+          <div class="tags">
+            <h4>Tags:</h4>
+            <ul>
+              <li *ngFor="let tag of course.tags">{{ tag }}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-icon-button (click)="addToWishlist(course)">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button (click)="addToCart(course)">
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    } @empty { Empty list of courses }
+  </mat-grid-list>
+  <mat-paginator
+    [length]="courses.length"
+    [pageSize]="4"
+    [showFirstLastButtons]="true"
+    [pageSizeOptions]="[4, 6, 8]"
+    (page)="handlePageEvent($event)"
+    class="paginator"
+  >
+  </mat-paginator>
+</div>

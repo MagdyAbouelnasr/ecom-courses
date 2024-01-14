@@ -1,0 +1,92 @@
+.page-banner {
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    color: #333; 
+    font-size: 2em; 
+  }
+}
+
+.course-card {
+  max-width: 400px;
+}
+
+.author {
+  color: black;
+  font-size: large;
+}
+
+.courseName {
+  font-weight: bold;
+}
+
+.paginator {
+  display: flex;
+  flex: row;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: medium;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: red;
+}
+
+.price-details {
+  h3,
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .strikethrough {
+    text-decoration: line-through;
+  }
+}
+
+.tags {
+  margin-top: 10px;
+
+  h4 {
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline;
+      margin-right: 5px;
+      padding: 2px 5px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+  }
+}
+
+.sorting-container {
+  display: flex; // Use flexbox for layout
+  align-items: center; // Vertically align items in the center
+  justify-content: space-between; // Create space between the elements
+  width: 100%; // Full width of the container
+
+  .full-width-select,
+  .search-bar {
+    flex: 1; // Allow both elements to grow and take up equal space
+    margin-right: 10px; // Add some space to the right of each element
+
+    &:last-child {
+      margin-right: 0; // Remove the margin for the last element
+    }
+  }
+
+  mat-form-field {
+    width: 100%; // Full width for each form field
+  }
+}

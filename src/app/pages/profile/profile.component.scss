@@ -1,0 +1,50 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; // Full width of the container
+
+  .profile-form {
+    display: flex;
+    max-width: 960px; // Adjust overall form width as needed
+    width: 100%; // Full width
+    margin-top: 20px;
+
+    .left-column {
+      flex: 1; // Take up 1 portion of the available space
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 20px; // Spacing between columns
+
+      .profile-image {
+        width: 200px; // Larger image size
+        height: 200px;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        button {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .right-column {
+      flex: 4; // Take up 3 portions of the available space
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      mat-form-field,
+      .mat-radio-group {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

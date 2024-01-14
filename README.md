@@ -1,27 +1,58 @@
-# EcomCourses
+# Angular E-Learning Platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+## Project Overview
+This Angular-based e-learning platform offers a seamless experience for users to explore and enroll in various courses. It features a modern, responsive UI and functionalities that cater to both educational needs and user convenience.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### User Authentication
+- Secure authentication using Firebase.
+- Registration, login, and logout functionalities.
+- Persistent user session across page reloads.
 
-## Code scaffolding
+### Course Browsing and Management
+- Courses loaded from a JSON file, offering a variety of educational topics.
+- Course exploration, sorting, and search functionality.
+- Detailed course information including price, author, and tags.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### User Interactivity
+- Add courses to wishlist or shopping cart.
+- Persistent wishlist and cart items using local storage.
+- Add/remove courses from wishlist and cart, and view course summaries.
 
-## Build
+### Checkout System
+- Streamlined checkout process for course enrollment.
+- Total price and savings display for selected courses.
+- Confirmation dialog on successful order placement.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### User Profile
+- View and edit user profile.
+- Profile details include name, interests, professional status, and expertise.
 
-## Running unit tests
+### Responsive Design
+- Smooth user experience across devices and screen sizes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+- **Frontend**: Angular 17 with Angular Material UI components.
+- **Authentication and Data Management**: Firebase.
+- **State Management**: Angular Signals (Angular 17 feature).
+- **Styling**: SCSS.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Setup and Installation
+1. **Clone the Repository**
+   ```sh
+   git clone [repository-url]
+2. **Navigate to the Project Directory
+   ```sh
+   cd [project-name]
+3. **Install Dependencies
+   ```sh
+   npm install
+4. **Environment Setup
+   ```sh
+   -Set up Firebase project and add configuration to environment.ts.
+   -Place JSON file for courses in the assets directory.
+5. **Run the Application
+   ```sh
+   ng serve
+   -access at `http://localhost:4200`
